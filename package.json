@@ -1,0 +1,16 @@
+{
+  "name": "m6-g4-grupo3",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "jimp": "^1.6.0",
+    "yargs": "^17.7.2"
+  }
+}
