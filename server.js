@@ -7,6 +7,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// validacion de key
 const argv = yargs.option("key", {
   alias: "k",
   description: "Clave para iniciar el servidor",
@@ -21,6 +22,8 @@ if (argv.key === 123) {
   console.log("Clave incorrecta. No se puede iniciar el servidor.");
 }
 
+// endpoints
+// form
 app.get("/", (req, res) => {
   res.send(`
       <html>
@@ -38,6 +41,7 @@ app.get("/", (req, res) => {
     `);
 });
 
+// procesado y respuesta
 app.post("/process-image", async (req, res) => {
   const imageUrl = req.body.imageUrl;
 
